@@ -1,0 +1,80 @@
+.gate {
+  position: fixed; inset: 0; z-index: 100;
+  display: grid; place-items: center;
+  overflow-y: auto; padding: 2rem 1.25rem;
+  color: var(--cream);
+  text-align: center;
+  background: radial-gradient(circle at 50% 24%, #76283f 0, var(--wine) 66%);
+  transition: opacity .85s ease, visibility .85s ease;
+}
+.gate.is-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+.gate__content { width: min(100%, 31rem); animation: gate-rise 1s both; }
+.eyebrow { margin: 0; color: var(--rose); font: 1.8rem/1.25 var(--script); }
+.gate__name { margin: .25rem 0 1.1rem; color: white; font: 400 clamp(3.5rem, 13vw, 6.2rem)/1 var(--script); overflow-wrap: anywhere; }
+.gate__invitation { margin: 0 0 1.3rem; color: #f8e8eb; }
+.gate__ornament { position: absolute; top: 9%; right: 11%; color: var(--gold); font-size: 2rem; opacity: .7; }
+.portrait {
+  width: min(15rem, 62vw); aspect-ratio: 4 / 5;
+  margin: 0 auto 1.4rem; padding: .45rem;
+  border: 1px solid var(--gold); border-radius: 48% 48% .8rem .8rem;
+  background: rgb(255 255 255 / 8%);
+  box-shadow: 0 12px 35px rgb(0 0 0 / 13%);
+}
+.portrait img { width: 100%; height: 100%; border-radius: 48% 48% .45rem .45rem; object-fit: cover; background: var(--rose-soft); }
+.portrait--final { width: min(16rem, 66vw); margin-bottom: 2.3rem; }
+
+.site-header {
+  position: fixed; z-index: 30; inset: 0 0 auto;
+  display: flex; min-height: var(--header-height); align-items: center; justify-content: space-between;
+  padding: .55rem clamp(1rem, 4vw, 2.2rem);
+  color: var(--cream); background: rgb(74 20 36 / 96%);
+  box-shadow: 0 5px 24px rgb(30 10 18 / 10%);
+  opacity: 0; transform: translateY(-110%); transition: transform .45s ease, opacity .45s ease;
+  backdrop-filter: blur(12px);
+}
+.site-header.is-visible { opacity: 1; transform: none; }
+.brand { color: white; text-decoration: none; font: 1.8rem/1 var(--script); white-space: nowrap; }
+.brand span { color: var(--rose); font: 1rem var(--sans); }
+.site-nav { display: flex; align-items: center; justify-content: flex-end; gap: clamp(.5rem, 1.4vw, 1.25rem); }
+.site-nav a { padding: .5rem 0; color: var(--rose); text-decoration: none; font-size: .91rem; transition: color .2s ease; }
+.site-nav a:hover, .site-nav a:focus-visible { color: white; }
+.nav-toggle { display: none; }
+
+.toast {
+  position: fixed; z-index: 90; left: 50%; bottom: max(1.25rem, env(safe-area-inset-bottom));
+  width: max-content; max-width: calc(100% - 2rem); padding: .8rem 1.1rem;
+  border: 1px solid var(--gold); border-radius: 1rem;
+  color: var(--cream); background: var(--wine); text-align: center;
+  box-shadow: var(--shadow); opacity: 0; pointer-events: none;
+  transform: translate(-50%, 1rem); transition: opacity .25s ease, transform .25s ease;
+}
+.toast.is-visible { opacity: 1; transform: translate(-50%, 0); }
+.back-to-top {
+  position: fixed; z-index: 25; right: 1rem; bottom: max(1rem, env(safe-area-inset-bottom));
+  width: 3rem; height: 3rem; border: 1px solid var(--gold); border-radius: 50%;
+  color: var(--cream); background: var(--wine); font-size: 1.35rem; cursor: pointer;
+  opacity: 0; visibility: hidden; transform: translateY(.5rem); transition: .25s ease;
+}
+.back-to-top.is-visible { opacity: 1; visibility: visible; transform: none; }
+
+.lightbox {
+  position: fixed; width: min(95vw, 70rem); max-width: none; max-height: 94vh;
+  padding: 3.2rem 3.5rem 1.5rem; border: 0; color: var(--cream); background: transparent; overflow: visible;
+}
+.lightbox::backdrop { background: rgb(25 7 14 / 93%); backdrop-filter: blur(5px); }
+.lightbox figure { margin: 0; text-align: center; }
+.lightbox img { max-width: 100%; max-height: 76vh; margin: auto; border: .45rem solid white; border-radius: .35rem; object-fit: contain; }
+.lightbox figcaption { margin-top: .8rem; color: var(--cream); }
+.lightbox__close, .lightbox__nav {
+  position: fixed; display: grid; place-items: center; width: 2.9rem; height: 2.9rem;
+  border: 1px solid var(--gold); border-radius: 50%; color: var(--wine); background: var(--cream);
+  cursor: pointer; font-size: 1.8rem; line-height: 1;
+}
+.lightbox__close { top: max(1rem, env(safe-area-inset-top)); right: 1rem; }
+.lightbox__nav { top: 50%; transform: translateY(-50%); }
+.lightbox__nav--previous { left: .7rem; }
+.lightbox__nav--next { right: .7rem; }
+.site-footer { padding: 1.5rem 1rem; color: var(--muted); background: #f4e9e4; text-align: center; font-size: .9rem; }
+.site-footer span { color: var(--red); }
+
+@keyframes gate-rise { from { opacity: 0; transform: translateY(1.5rem); } to { opacity: 1; transform: none; } }

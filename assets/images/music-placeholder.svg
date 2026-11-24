@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-labelledby="title">
+  <title id="title">Capa provisória da nossa música</title>
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f4d2da"/><stop offset="1" stop-color="#b86d82"/></linearGradient></defs>
+  <rect width="500" height="500" rx="250" fill="url(#g)"/><circle cx="250" cy="250" r="205" fill="none" stroke="#c9a25b" stroke-width="3"/><path d="M250 315 C160 250 175 170 225 170 C252 170 260 192 250 208 C275 160 340 170 340 225 C340 270 295 300 250 315Z" fill="#4a1424"/><text x="250" y="385" fill="#4a1424" font-family="Georgia,serif" font-size="25" text-anchor="middle">Nossa música</text>
+</svg>

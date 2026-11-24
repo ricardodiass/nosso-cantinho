@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" role="img" aria-labelledby="title desc">
+  <title id="title">Espaço para uma fotografia especial</title>
+  <desc id="desc">Ilustração delicada em tons de vinho e rosa com um coração dourado.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7dce2"/><stop offset="1" stop-color="#e9b8c5"/></linearGradient><radialGradient id="glow"><stop stop-color="#fff8f0" stop-opacity=".9"/><stop offset="1" stop-color="#fff8f0" stop-opacity="0"/></radialGradient></defs>
+  <rect width="640" height="800" fill="url(#bg)"/><circle cx="320" cy="300" r="260" fill="url(#glow)"/>
+  <path d="M320 510 C155 397 180 260 275 260 C325 260 345 300 320 330 C355 255 475 255 475 355 C475 425 390 480 320 510Z" fill="#7a2942" opacity=".88"/>
+  <path d="M320 530 C250 485 218 450 218 408" fill="none" stroke="#c9a25b" stroke-width="3" stroke-linecap="round"/>
+  <text x="320" y="620" fill="#4a1424" font-family="Georgia,serif" font-size="27" text-anchor="middle">Sua foto especial aqui</text>
+  <text x="320" y="662" fill="#7a4052" font-family="Georgia,serif" font-style="italic" font-size="20" text-anchor="middle">um pedacinho de nós</text>
+</svg>

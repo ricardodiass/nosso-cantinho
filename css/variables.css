@@ -1,0 +1,19 @@
+:root {
+  color-scheme: light;
+  --wine: #4a1424;
+  --wine-2: #6e1f37;
+  --red: #ad4058;
+  --rose: #f2c9d2;
+  --rose-soft: #f8e8eb;
+  --cream: #fbf5ef;
+  --paper: #fffdf9;
+  --gold: #c9a25b;
+  --ink: #351923;
+  --muted: #806b70;
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --script: "Parisienne", cursive;
+  --sans: "Jost", system-ui, sans-serif;
+  --shadow: 0 18px 55px rgb(74 20 36 / 10%);
+  --radius: 1.25rem;
+  --header-height: 4.25rem;
+}

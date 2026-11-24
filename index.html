@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#4a1424">
+  <meta name="description" content="Um cantinho especial para guardar nossa história, nossos momentos e tudo o que ainda vamos viver.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Nosso Cantinho ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="is-locked">
+  <canvas id="fx" aria-hidden="true"></canvas>
+
+  <section class="gate" id="gate" aria-labelledby="gate-title">
+    <div class="gate__content">
+      <p class="eyebrow" id="gate-greeting">Para alguém muito especial</p>
+      <h1 class="gate__name" id="gate-name">[NOME DELA]</h1>
+      <figure class="portrait portrait--gate">
+        <img id="gate-photo" src="" alt="Uma foto especial do casal" width="640" height="800">
+        <figcaption class="sr-only">Uma lembrança especial</figcaption>
+      </figure>
+      <p class="gate__invitation">Preparei um cantinho que é todinho nosso.</p>
+      <button class="button button--gold" id="enter-button" type="button">Clique para descobrir nossa história <span aria-hidden="true">♥</span></button>
+    </div>
+    <span class="gate__ornament" aria-hidden="true">✧</span>
+  </section>
+
+  <header class="site-header" id="site-header">
+    <a class="brand" href="#inicio" aria-label="Nosso Cantinho — início">nosso cantinho <span aria-hidden="true">♥</span></a>
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+      <a href="#historia">História</a>
+      <a href="#contador">Contador</a>
+      <a href="#motivos">Motivos</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#carta">Carta</a>
+      <a href="#musica">Música</a>
+      <a href="#sonhos">Sonhos</a>
+      <a href="#surpresas">Surpresas</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="section story-section" id="historia">
+      <div class="container">
+        <p class="section-kicker reveal">Tudo começou com a gente</p>
+        <h2 class="section-title reveal">Nossa história <span aria-hidden="true">♥</span></h2>
+        <p class="section-subtitle reveal">Cada capítulo guarda um pedacinho de nós.</p>
+        <div class="timeline" id="timeline" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section counter-section" id="contador">
+      <div class="container container--narrow">
+        <p class="section-kicker reveal">Cada segundo vale a pena</p>
+        <h2 class="section-title section-title--light reveal">Nosso contador de amor</h2>
+        <p class="section-subtitle section-subtitle--light reveal">Juntos desde aquele dia especial</p>
+        <div class="counter-grid reveal" id="counter-units" role="timer" aria-label="Tempo de relacionamento" aria-live="off"></div>
+        <p class="counter-quote reveal" id="counter-phrase"></p>
+        <p class="counter-note" id="counter-note" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="section reasons-section" id="motivos">
+      <div class="container">
+        <p class="section-kicker reveal">Pequenos detalhes, um amor imenso</p>
+        <h2 class="section-title reveal" id="reasons-title">Coisas que amo em você</h2>
+        <p class="section-subtitle reveal">Toque em cada coração para descobrir um motivo.</p>
+        <div class="reasons-grid" id="reasons-grid"></div>
+        <button class="button button--outline reveal" id="random-reason" type="button">Revelar um motivo surpresa ♥</button>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="galeria">
+      <div class="container">
+        <p class="section-kicker reveal">Instantes que moram no coração</p>
+        <h2 class="section-title reveal">Nossa galeria de momentos</h2>
+        <p class="section-subtitle reveal">Pedacinhos de felicidade que quero guardar para sempre.</p>
+        <div class="gallery-grid" id="gallery-grid"></div>
+      </div>
+    </section>
+
+    <section class="section letter-section" id="carta">
+      <div class="container container--narrow text-center">
+        <p class="section-kicker reveal">Algumas palavras só nossas</p>
+        <h2 class="section-title reveal">Uma carta para você <span aria-hidden="true">✉</span></h2>
+        <p class="section-subtitle reveal">Escrita com carinho, do meu coração para o seu.</p>
+        <div class="envelope-wrap reveal">
+          <div class="envelope" id="envelope" aria-hidden="true">
+            <div class="envelope__back"></div>
+            <div class="envelope__paper"></div>
+            <div class="envelope__front"></div>
+            <div class="envelope__flap"></div>
+            <span class="envelope__seal">♥</span>
+          </div>
+        </div>
+        <button class="button button--primary" id="open-letter" type="button">Abrir minha carta</button>
+        <article class="letter-paper" id="letter-content" aria-live="polite" hidden>
+          <p class="letter-paper__text" id="letter-text"></p>
+          <p class="letter-paper__signature" id="letter-signature"></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section music-section" id="musica">
+      <div class="container container--narrow">
+        <p class="section-kicker reveal">A trilha sonora da nossa história</p>
+        <h2 class="section-title reveal">Nossa música <span aria-hidden="true">♫</span></h2>
+        <p class="section-subtitle reveal">Tem canções que fazem a gente lembrar de alguém.</p>
+        <div class="music-card reveal" id="music-card">
+          <img class="music-cover" id="music-cover" src="" alt="Capa da nossa música" width="500" height="500">
+          <div class="music-info">
+            <p class="music-label">A nossa canção</p>
+            <h3 id="song-title">[NOME DA MÚSICA]</h3>
+            <p id="song-artist">[ARTISTA]</p>
+          </div>
+          <div class="equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+          <label class="sr-only" for="music-progress">Progresso da música</label>
+          <input id="music-progress" class="music-progress" type="range" min="0" max="100" value="0">
+          <div class="music-time"><span id="music-current">0:00</span><span id="music-duration">0:00</span></div>
+          <button class="button button--primary music-play" id="music-play" type="button">▶ Tocar</button>
+          <p class="music-message" id="music-message" role="status"></p>
+          <audio id="audio-player" preload="metadata"></audio>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dreams-section" id="sonhos">
+      <div class="container container--narrow">
+        <p class="section-kicker reveal">O melhor ainda está por vir</p>
+        <h2 class="section-title reveal">Nossa lista de sonhos <span aria-hidden="true">✧</span></h2>
+        <p class="section-subtitle reveal">Planos para transformar em lembranças.</p>
+        <ul class="dream-list" id="dream-list"></ul>
+        <form class="dream-form" id="dream-form">
+          <label class="sr-only" for="new-dream">Adicionar um novo sonho</label>
+          <input id="new-dream" name="dream" type="text" maxlength="120" placeholder="Escreva um sonho nosso..." autocomplete="off" required>
+          <button class="button button--primary" type="submit">Adicionar</button>
+        </form>
+        <p class="storage-note">Seus sonhos ficam salvos neste navegador e dispositivo.</p>
+      </div>
+    </section>
+
+    <section class="section surprise-section" id="surpresas">
+      <div class="container container--narrow text-center">
+        <p class="section-kicker reveal">Só mais uma coisinha...</p>
+        <h2 class="section-title reveal">Um espaço de surpresas <span aria-hidden="true">✧</span></h2>
+        <p class="surprise-intro reveal">Às vezes, o amor também se esconde nos pequenos detalhes.</p>
+        <button class="button button--primary reveal" id="surprise-button" type="button">Tenho uma surpresa para você ♥</button>
+        <p class="surprise-message" id="surprise-message" aria-live="polite"></p>
+        <p class="secret-hint reveal">E dizem que existem corações escondidos por aqui...</p>
+      </div>
+    </section>
+
+    <section class="section final-section" id="final">
+      <div class="container container--narrow text-center">
+        <figure class="portrait portrait--final reveal">
+          <img id="final-photo" src="" alt="Mais uma lembrança especial do casal" width="640" height="800" loading="lazy">
+        </figure>
+        <p class="section-kicker section-kicker--light reveal">Meu lugar favorito é ao seu lado</p>
+        <h2 class="final-title reveal">Sempre você <span aria-hidden="true">♥</span></h2>
+        <blockquote class="final-quote reveal" id="final-quote"></blockquote>
+        <p class="final-message reveal" id="final-message"></p>
+        <p class="final-signature reveal" id="final-signature"></p>
+        <div class="final-hearts" aria-hidden="true">♡　♥　♡</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    Feito com amor, para guardar o que é nosso. <span aria-hidden="true">♥</span>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Visualização da fotografia">
+    <button class="lightbox__close" id="lightbox-close" type="button" aria-label="Fechar fotografia">×</button>
+    <button class="lightbox__nav lightbox__nav--previous" id="lightbox-previous" type="button" aria-label="Fotografia anterior">‹</button>
+    <figure>
+      <img id="lightbox-image" src="" alt="">
+      <figcaption id="lightbox-caption"></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__nav--next" id="lightbox-next" type="button" aria-label="Próxima fotografia">›</button>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Voltar ao início">↑</button>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
