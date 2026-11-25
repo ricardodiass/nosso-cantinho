@@ -41,10 +41,26 @@
   .counter-quote { font-size: 1.35rem; }
   .reasons-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .65rem; }
   .reason-card { min-height: 6.4rem; font-size: 1.6rem; }
-  .gallery-grid { columns: 2 8.5rem; column-gap: .65rem; }
-  .gallery-item { margin-bottom: .65rem; }
-  .gallery-item__button { padding: .22rem; }
-  .gallery-item figcaption { font-size: .78rem; }
+  .gallery-grid {
+    columns: 2 8rem;
+    column-gap: .7rem;
+  }
+  .gallery-item {
+    margin-bottom: .75rem;
+  }
+  .gallery-item__button {
+    padding: .25rem;
+    border-radius: .6rem;
+  }
+  .gallery-item figcaption {
+    font-size: .78rem;
+    line-height: 1.4;
+  }
+  .gallery-quote {
+    margin: .25rem 0 .85rem;
+    padding: 1rem .35rem;
+    font-size: 1.7rem;
+  }
   .lightbox { width: 100vw; padding: 3.5rem 2.5rem 1rem; }
   .lightbox img { max-height: 72vh; border-width: .25rem; }
   .lightbox__nav { width: 2.35rem; height: 2.35rem; font-size: 1.5rem; }

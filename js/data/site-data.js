@@ -70,16 +70,17 @@ export const SITE_DATA = {
   ],
 
   gallery: [
-    // Exemplo para adicionar uma foto:
-    // {
-    //   id: "momento-001",
-    //   src: "assets/images/gallery/foto-001.jpg",
-    //   caption: "[LEGENDA DA FOTO]",
-    //   date: "[DATA OPCIONAL]",
-    //   ratio: "4 / 5", // Exemplos: "1 / 1", "4 / 5", "4 / 3"
-    // },
-    // Você também pode inserir uma frase entre as fotos:
-    // { quote: "Você é meu lugar favorito." },
+    { id: "momento-01", src: "assets/images/gallery/momento-01.webp", caption: "Fotinha com a kiki.", ratio: "3 / 4" },
+    { id: "momento-02", src: "assets/images/gallery/momento-02.webp", caption: "A gente e nossas caras de sempre kkkkk.", ratio: "3 / 4" },
+    { id: "momento-03", src: "assets/images/gallery/momento-03.webp", caption: "\"Quase errou a casa\" kkkkkkkkkk.", ratio: "4 / 3" },
+    { id: "momento-04", src: "assets/images/gallery/momento-04.webp", caption: "Show incrível com você e guardando mais uma memória.", ratio: "4 / 3" },
+    { id: "momento-05", src: "assets/images/gallery/momento-05.webp", caption: "Um sorriso desses melhora qualquer noite.", ratio: "3 / 4" },
+    { id: "momento-06", src: "assets/images/gallery/momento-06.webp", caption: "Uma noite perfeita com a namorada perfeita.", ratio: "4 / 3" },
+    { id: "momento-07", src: "assets/images/gallery/momento-07.webp", caption: "A gente aproveitando cada momento.", ratio: "4 / 3" },
+    { id: "momento-08", src: "assets/images/gallery/momento-08.webp", caption: "Mais uma foto pra lembrar desse dia.", ratio: "9 / 16" },
+    { id: "momento-09", src: "assets/images/gallery/momento-09.webp", caption: "\"Cadê o chocolate\" kkkkkkkkkk.", ratio: "3 / 4" },
+    { id: "momento-10", src: "assets/images/gallery/momento-10.webp", caption: "Que mulher maravilhosa...", ratio: "3 / 4" },
+    { id: "foto-final", src: "assets/images/final.webp", caption: "Mais um momento nosso.", ratio: "9 / 16" },
   ],
 
   letter: {
