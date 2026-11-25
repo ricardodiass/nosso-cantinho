@@ -82,3 +82,28 @@
   .reasons-grid { grid-template-columns: 1fr 1fr; }
   .brand { font-size: 1.55rem; }
 }
+
+@media (max-width: 600px) {
+  .timeline-form__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .timeline-form__field--wide {
+    grid-column: auto;
+  }
+
+  .timeline-form__actions {
+    flex-direction: column;
+  }
+
+  .timeline-form__actions .button {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 420px) {
+  .timeline-delete-dialog__actions {
+    grid-template-columns: 1fr;
+  }
+}

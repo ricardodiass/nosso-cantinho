@@ -6,7 +6,7 @@ Site romântico estático feito com HTML, CSS e JavaScript puro (ES Modules). N�
 
 - Navegador moderno.
 - Python 3 para executar um servidor local simples (já costuma estar disponível em distribuições Linux).
-- Conexão com a internet apenas para carregar as fontes do Google Fonts. Sem conexão, o site utiliza fontes alternativas.
+- Conexão com a internet para carregar as fontes do Google Fonts e o vídeo incorporado do YouTube. Sem conexão, o site utiliza fontes alternativas, mas o vídeo não será reproduzido.
 
 ## Executar localmente no Ubuntu
 

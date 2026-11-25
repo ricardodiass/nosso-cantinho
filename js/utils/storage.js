@@ -72,3 +72,57 @@ export function saveDreams(dreams) {
     return false;
   }
 }
+
+
+const TIMELINE_KEY = "nosso-cantinho:timeline:v1";
+const TIMELINE_MAX_STORAGE_CHARS = 1_800_000;
+const TIMELINE_MAX_IMAGE_CHARS = 480_000;
+
+export function loadTimelineEvents() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(TIMELINE_KEY));
+
+    if (!Array.isArray(saved)) return [];
+
+    return saved
+      .filter((item) => (
+        item &&
+        typeof item.id === "string" &&
+        typeof item.title === "string" &&
+        item.title.trim() &&
+        typeof item.date === "string" &&
+        /^\d{2}\/\d{2}\/\d{4}$/.test(item.date)
+      ))
+      .map((item) => ({
+        id: item.id.slice(0, 100),
+        date: item.date,
+        title: item.title.trim().slice(0, 100),
+        description: typeof item.description === "string"
+          ? item.description.slice(0, 700)
+          : "",
+        photo: (
+          typeof item.photo === "string" &&
+          item.photo.length <= TIMELINE_MAX_IMAGE_CHARS &&
+          /^data:image\/(?:webp|jpeg);base64,/.test(item.photo)
+        ) ? item.photo : null,
+      }));
+  } catch {
+    return [];
+  }
+}
+
+export function saveTimelineEvents(events) {
+  try {
+    if (!Array.isArray(events)) return false;
+
+    const serialized = JSON.stringify(events);
+
+    // Limite conservador para não ocupar todo o espaço do localStorage.
+    if (serialized.length > TIMELINE_MAX_STORAGE_CHARS) return false;
+
+    localStorage.setItem(TIMELINE_KEY, serialized);
+    return true;
+  } catch {
+    return false;
+  }
+}

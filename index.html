@@ -7,6 +7,7 @@
   <meta name="description" content="Um cantinho especial para guardar nossa história, nossos momentos e tudo o que ainda vamos viver.">
   <meta name="robots" content="noindex, nofollow">
   <title>Nosso Cantinho ❤️</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@400;500;600&family=Parisienne&display=swap" rel="stylesheet">
@@ -56,6 +57,61 @@
         <p class="section-kicker reveal">Tudo começou com a gente</p>
         <h2 class="section-title reveal">Nossa história <span aria-hidden="true">♥</span></h2>
         <p class="section-subtitle reveal">Cada capítulo guarda um pedacinho de nós.</p>
+
+        <div class="timeline-actions reveal">
+          <button
+            class="button button--outline"
+            id="timeline-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="timeline-form"
+          >
+            Adicionar acontecimento <span aria-hidden="true">＋</span>
+          </button>
+        </div>
+
+        <form class="timeline-form" id="timeline-form" hidden>
+          <p class="timeline-form__intro">Mais uma lembrança para guardar juntinhos. ❤️</p>
+
+          <div class="timeline-form__grid">
+            <div class="timeline-form__field">
+              <label for="timeline-title">Título do acontecimento</label>
+              <input
+                id="timeline-title"
+                name="title"
+                type="text"
+                maxlength="100"
+                placeholder="Ex.: Nossa primeira viagem"
+                autocomplete="off"
+                required
+              >
+            </div>
+
+            <div class="timeline-form__field">
+              <label for="timeline-date">Data</label>
+              <input id="timeline-date" name="date" type="date" required>
+            </div>
+
+            <div class="timeline-form__field timeline-form__field--wide">
+              <label for="timeline-description">Descrição (opcional)</label>
+              <textarea
+                id="timeline-description"
+                name="description"
+                rows="4"
+                maxlength="700"
+                placeholder="Conte um pouquinho sobre esse momento..."
+              ></textarea>
+            </div>
+
+
+          </div>
+
+          <div class="timeline-form__actions">
+            <button class="button button--primary" type="submit">Guardar lembrança ♥</button>
+            <button class="button button--outline" id="timeline-cancel" type="button">Cancelar</button>
+          </div>
+        </form>
+
         <div class="timeline" id="timeline" aria-live="polite"></div>
       </div>
     </section>
@@ -192,6 +248,43 @@
   <footer class="site-footer">
     Feito com amor, para guardar o que é nosso. <span aria-hidden="true">♥</span>
   </footer>
+
+  <dialog
+    class="timeline-delete-dialog"
+    id="timeline-delete-dialog"
+    aria-labelledby="timeline-delete-heading"
+    aria-describedby="timeline-delete-description timeline-delete-warning"
+  >
+    <div class="timeline-delete-dialog__inner">
+      <span class="timeline-delete-dialog__icon" aria-hidden="true">♥</span>
+      <p class="timeline-delete-dialog__eyebrow">Nossa história</p>
+      <h2 id="timeline-delete-heading">Remover esta lembrança?</h2>
+      <p class="timeline-delete-dialog__description" id="timeline-delete-description">
+        Você está prestes a retirar este capítulo da nossa linha do tempo:
+      </p>
+      <p class="timeline-delete-dialog__event" id="timeline-delete-event-title"></p>
+      <p class="timeline-delete-dialog__warning" id="timeline-delete-warning">
+        Essa lembrança será removida deste navegador e não poderá ser recuperada.
+      </p>
+      <div class="timeline-delete-dialog__actions">
+        <button
+          class="timeline-delete-dialog__button timeline-delete-dialog__button--keep"
+          id="timeline-delete-cancel"
+          type="button"
+          autofocus
+        >
+          Manter lembrança
+        </button>
+        <button
+          class="timeline-delete-dialog__button timeline-delete-dialog__button--remove"
+          id="timeline-delete-confirm"
+          type="button"
+        >
+          Remover
+        </button>
+      </div>
+    </div>
+  </dialog>
 
   <dialog class="lightbox" id="lightbox" aria-label="Visualização da fotografia">
     <button class="lightbox__close" id="lightbox-close" type="button" aria-label="Fechar fotografia">×</button>
