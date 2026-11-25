@@ -106,11 +106,15 @@ export const SITE_DATA = {
   ],
 
   surprises: [
-    "Eu escolheria você em todas as vidas.",
-    "Seu abraço é meu lugar seguro.",
-    "Obrigado por existir do jeitinho que você é.",
-    "Você me faz querer ser melhor.",
-    "Ainda quero colecionar muitos sorrisos ao seu lado.",
+    "Minha periquitinha favorita. Você é minha pessoa preferida. ❤️",
+    "Até um passeio para tomar sorvete fica especial quando é com você.",
+    "Ainda dou risada lembrando do quase erro da casa kkkkkkk.",
+    "E o chocolate? Espero que a gente nunca pare de procurar kkkkkkk.",
+    "Quero conhecer o mundo inteiro com você, um passeio de cada vez.",
+    "A Kiki também já faz parte das nossas lembranças especiais.",
+    "Obrigado por ser minha namorada, companheira e melhor amiga.",
+    "Meu lugar favorito continua sendo qualquer lugar onde você esteja.",
+    "Eu te amo meu mozin. E eu continuo achando que amassei na carta kkkkkkk.",
   ],
 
   ending: {
