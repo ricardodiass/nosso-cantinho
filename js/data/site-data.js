@@ -97,13 +97,12 @@ export const SITE_DATA = {
   },
 
   dreams: [
-    // Ideias iniciais editáveis. Substitua pelas vontades de vocês.
-    "Conhecer novos lugares",
-    "Viajar juntos",
-    "Assistir ao pôr do sol",
-    "Fazer novas aventuras",
-    "Conhecer restaurantes diferentes",
-    "Construir novas memórias",
+    "Conhecer muitos lugares juntos",
+    "Fazer novas viagens e descobrir destinos diferentes",
+    "Experimentar restaurantes que ainda não conhecemos",
+    "Assistir ao pôr do sol juntinhos",
+    "Viver novas aventuras, mesmo as mais inesperadas",
+    "Continuar colecionando nossas histórias e lembranças",
   ],
 
   surprises: [
