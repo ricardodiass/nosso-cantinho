@@ -89,8 +89,9 @@ export const SITE_DATA = {
   },
 
   music: {
-    title: "[NOME DA MÚSICA]",
-    artist: "[NOME DO ARTISTA]",
+    title: "Te Assumi Pro Brasil",
+    artist: "Matheus & Kauan",
+    youtubeVideoId: "qL9VDKaSO_s",
     cover: "assets/images/music-placeholder.svg",
     file: "", // Exemplo: "assets/audio/nossa-musica.mp3"
   },

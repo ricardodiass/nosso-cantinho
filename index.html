@@ -118,19 +118,32 @@
         <h2 class="section-title reveal">Nossa música <span aria-hidden="true">♫</span></h2>
         <p class="section-subtitle reveal">Tem canções que fazem a gente lembrar de alguém.</p>
         <div class="music-card reveal" id="music-card">
-          <img class="music-cover" id="music-cover" src="" alt="Capa da nossa música" width="500" height="500">
           <div class="music-info">
             <p class="music-label">A nossa canção</p>
-            <h3 id="song-title">[NOME DA MÚSICA]</h3>
-            <p id="song-artist">[ARTISTA]</p>
+            <h3 id="song-title">Te Assumi Pro Brasil</h3>
+            <p id="song-artist">Matheus &amp; Kauan</p>
           </div>
-          <div class="equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-          <label class="sr-only" for="music-progress">Progresso da música</label>
-          <input id="music-progress" class="music-progress" type="range" min="0" max="100" value="0">
-          <div class="music-time"><span id="music-current">0:00</span><span id="music-duration">0:00</span></div>
-          <button class="button button--primary music-play" id="music-play" type="button">▶ Tocar</button>
-          <p class="music-message" id="music-message" role="status"></p>
-          <audio id="audio-player" preload="metadata"></audio>
+
+          <div class="music-video-wrap">
+            <iframe
+              id="music-video"
+              title="Te Assumi Pro Brasil — Matheus &amp; Kauan"
+              src="about:blank"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <a
+            class="music-youtube-link"
+            id="music-youtube-link"
+            href="https://www.youtube.com/watch?v=qL9VDKaSO_s"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Assistir diretamente no YouTube ↗</a>
+
         </div>
       </div>
     </section>
